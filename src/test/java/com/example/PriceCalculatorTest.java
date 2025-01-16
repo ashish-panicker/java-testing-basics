@@ -39,7 +39,7 @@ class PriceCalculatorTest {
     }
 
     @Test
-    void given_FrequentFlyingRetiresServiceMan_whenPriceCalculated_thenReturnDiscount() {
+    void given_FrequentFlyingRetiredServiceMan_whenPriceCalculated_thenReturnDiscount() {
     }
 
 }
