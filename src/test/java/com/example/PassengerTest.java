@@ -9,6 +9,8 @@ import org.junit.jupiter.api.Test;
 
 class PassengerTest {
 
+
+
     @Test
     @DisplayName("Test Passenger class")
     void testPassenger() {

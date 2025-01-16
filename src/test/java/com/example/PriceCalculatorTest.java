@@ -1,13 +1,14 @@
 package com.example;
 
 import org.junit.jupiter.api.*;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.time.LocalDate;
 
 class PriceCalculatorTest {
 
-    Passenger  passenger;
+    Passenger passenger;
 
     @BeforeEach
     public void setUp() {
@@ -29,12 +30,16 @@ class PriceCalculatorTest {
         float initPrice = passenger.getPrice();
         float expectedPrice = initPrice - (initPrice * 0.05f);
         var discounterPassenger = PriceCalculator
-                    .calculateFinalPrice(passenger);
+                .calculateFinalPrice(passenger);
         String message = String.format("%s is the actual price", passenger.getPrice());
         assertEquals(0, passenger.getTravelPoints());
         assertEquals(5.0f, passenger.getTravelPass().getDiscount());
         assertEquals(expectedPrice, discounterPassenger.getPrice(), message);
 
+    }
+
+    @Test
+    void given_FrequentFlyingRetiresServiceMan_whenPriceCalculated_thenReturnDiscount() {
     }
 
 }
